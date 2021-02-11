@@ -28,7 +28,12 @@ table, th, td {
    <tr>
      <td> {{ $uno['id'] }}</td>
      <td> {{ $uno['nombre_depart'] }} </td>
-     <td><a href="{{ route('departments.show', $uno['id']) }}">mostrar</a></td> 
+     <td><form action="{{ route('departments.destroy', $uno['id']) }}" method="POST">
+          <a href="{{ route('departments.show', $uno['id']) }}">mostrar</a>            
+            @csrf
+            @method('DELETE')
+            <button type="submit" title="delete">eliminar</button>
+       </form></td> 
    </tr>
   @endforeach
 </table> 

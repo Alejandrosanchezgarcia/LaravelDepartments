@@ -31,8 +31,13 @@ table, th, td {
      <td> {{ $uno['id'] }}</td>
      <td> {{ $uno['nombre_emp'] }} </td>
      <td> {{ $uno['email'] }} </td>
-     <td> {{ $uno['nombre_depart'] }} </td> 
-     <td><a href="{{ route('employees.show', $uno['id']) }}">mostrar</a></td> 
+     <td> {{ $uno['nombre_depart'] }} </td>     
+     <td><form action="{{ route('employees.destroy', $uno['id']) }}" method="POST">
+          <a href="{{ route('employees.show', $uno['id']) }}">mostrar</a>            
+            @csrf
+            @method('DELETE')
+            <button type="submit" title="delete">eliminar</button>
+       </form></td>
    </tr>
   @endforeach
 </table> 
