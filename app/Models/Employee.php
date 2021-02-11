@@ -18,6 +18,6 @@ class Employee extends Model
 
     public function pertenece()
     {
-        return $this->belongsTo(Department::class, 'nombre_depart', 'id');
+        return $this->belongsTo(Department::class, 'nombre_depart', 'nombre_depart');
     }
 }

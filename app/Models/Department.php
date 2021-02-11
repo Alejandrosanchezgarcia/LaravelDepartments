@@ -14,6 +14,6 @@ class Department extends Model
     ];
     public function tieneVarios()
     {
-        return $this->hasMany(Employee::class);
+        return $this->hasMany(Employee::class, 'nombre_depart', 'nombre_depart' );
     }
 }
