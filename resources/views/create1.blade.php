@@ -1,6 +1,6 @@
 <html>
 <body>
-  <h2>Crear Departamento</h2>
+  <h2>Crear Empleado</h2>
 
 <form action="{{ route('employees.store') }}" method="POST">
   @csrf
