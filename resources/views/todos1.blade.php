@@ -31,7 +31,7 @@ table, th, td {
      <td> {{ $uno['id'] }}</td>
      <td> {{ $uno['nombre_emp'] }} </td>
      <td> {{ $uno['email'] }} </td>
-     <td> {{ $uno->pertenece['nombre_depart'] }} </td>     
+     <td> {{ $uno['nombre_depart'] }} </td>     
      <td><form action="{{ route('employees.destroy', $uno['id']) }}" method="POST">
           <a href="{{ route('employees.show', $uno['id']) }}">mostrar</a>            
             @csrf
